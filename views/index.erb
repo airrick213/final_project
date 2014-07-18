@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<meta charset="UTF-8">
+	<title>Calendar Weather</title>
+	<link rel="stylsheet" type="text/css" href="../public/css/style.css">
+</head>
+<body>
+	<div id="container">
+		<h1>Calendar Weather</h1>
+		<h2>Make sure that skies are clear, whenever and wherever you want!</h2>
+		<br>
+
+		<h3>What would you like to do?</h3>
+		<form name="input" action="/" method="POST">
+			Date: <input type="text" name="date">
+			Action: <input type="text" name="action">
+			Place: <input type="text" name="place">
+			<input type="submit" value="Add Item">
+		</form>
+		<br>
+		<form name="input" action="/" method="POST">
+			Action: <input type="text" name="delete_target">
+			<input type="submit" value="Delete Item">
+		</form>
+		<br>
+		<form name="input" action="/" method="POST">
+			Email: <input type="text" name="email">
+			<input type="submit" value="Weather Report">
+		</form>
+		<br>
+
+ 		<p><%= @calendar %></p>
+	</div>
+</body>
+</html>

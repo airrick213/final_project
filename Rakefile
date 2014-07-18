@@ -1,0 +1,5 @@
+require 'open-uri'
+require 'nokogiri'
+require 'mechanize'
+require 'mailgun'
+require_relative './lib/final_project.rb'
