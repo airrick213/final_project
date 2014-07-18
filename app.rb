@@ -6,11 +6,6 @@ require './lib/final_project.rb'
 get '/' do
 	@scraper = CalendarWeather.new
 	@calendar = @scraper.view_calendar
-	@date = nil
-	@action = nil
-	@place = nil
-	@delete_target = nil
-	@email = nil
 	erb :index
 end
 

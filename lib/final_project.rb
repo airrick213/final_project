@@ -18,7 +18,7 @@ class CalendarWeather
 		text = ""
 		File.open('calendar.txt', 'r') do |file|
 			while line = file.gets
-				text += "#{line}" + "\n"
+				text += "#{line}<br>"
 			end
 		end
 		text

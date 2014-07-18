@@ -1,4 +1,25 @@
-.container {
-	width: 90%;
-	margin: 30px auto;
+body {
+	background: #F9F9FF;
+	font-family: sans-serif;
+}
+
+div#container {
+	width: 60%;
+	margin: 0 auto;
+	background: #FFFFFF;
+	padding: 0px 45px 0px;
+}
+
+h1, h2 {
+	text-align: center;
+}
+
+h1 {
+	padding-top: 10px;
+}
+
+div#calendar {
+	display: block;
+	vertical-align: left;
+	line-height: 150%;
 }
