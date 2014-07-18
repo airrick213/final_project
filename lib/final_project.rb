@@ -24,31 +24,18 @@ class CalendarWeather
 		text
 	end
 
-	def add_item
+	def add_item(date, event, place)
 		File.open('calendar.txt', 'a') do |file|
-			puts "What is your event's date?"
-			date = gets.chomp
 			file.print "#{date}: "
-
-			puts "What will you be doing?"
-			event = gets.chomp
 			file.print "#{event} "
-
-			puts "Where?"
-			place = gets.chomp
 			file.print "at #{place}.\n"
-
 			File.open('calendar_info.txt', 'a') do |file|
 				file.print "#{date};#{event};#{place}\n"
 			end
 		end
-		puts ""
 	end
 
-	def delete_item
-		view_calendar
-		puts "What would you like to delete? (Action)"
-		target = gets.chomp
+	def delete_item(target)
 		File.open('calendar2.txt', 'a') do |new_file|
 			File.open('calendar.txt', 'r') do |file|
 				while line = file.gets
@@ -72,10 +59,6 @@ class CalendarWeather
 		end
 		File.delete('calendar_info.txt')
 		File.rename('calendar_info2.txt', 'calendar_info.txt')
-
-		puts ""
-		puts "Here's what you have left:"
-		view_calendar
 	end
 
 	def weather_search(date, location)
@@ -171,7 +154,7 @@ class CalendarWeather
 	  config.domain  = 'sandbox8797a6b096ab495b88abd8e0efadbc58.mailgun.org'
 	end
 
-	def weather_report
+	def weather_report(email)
 		event_dates = []
 		event_names = []
 		event_locations = []
@@ -191,8 +174,6 @@ class CalendarWeather
 
 		@mailgun = Mailgun()
 
-		puts "What is your email?"
-		email = gets.chomp
 		parameters = {
 			:to => email,
 			:subject => "Weather Report",
