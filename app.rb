@@ -1,6 +1,7 @@
 require 'bundler' #require bundler
 Bundler.require #require everything in bundler in gemfile
 require 'pry'
+require 'pg'
 require './lib/final_project.rb'
 
 get '/' do
