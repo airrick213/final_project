@@ -1,0 +1,1 @@
+My final project implements both calendar-making and weather-scraping functions. It is designed to allow users to keep track of upcoming events and request an emailed weather report for those days.
